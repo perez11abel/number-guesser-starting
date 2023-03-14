@@ -5,15 +5,15 @@ let currentRoundNumber = 1;
 
 // ES6 Arrow Function
 const generateTarget = () => {
-  return Math.floor(Math.random() * 10);
+  return Math.floor(Math.random() * 11);
 };
 
 const compareGuesses = (humanGuess, computerGuess, targetGuess) => {
   const humanDifference = Math.abs(targetGuess - humanGuess);
   const computerDifference = Math.abs(targetGuess - computerGuess);
   // Conditional Statement
-  if (humanGuess < 0 || humanGuess > 9) {
-    alert("Next time pick a number between 0 & 9");
+  if (humanGuess < 0 || humanGuess > 10) {
+    alert("Next time pick a number between 0 & 10");
   }
 
   if (humanDifference <= computerDifference) {
